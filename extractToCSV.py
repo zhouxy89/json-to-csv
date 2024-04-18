@@ -20,14 +20,15 @@ def flatten_json(y):
     flatten(y)
     return out
 
-path = './json/P01_2024-03-15_AMD'
+path = './json/P01_2024-04-10'
 
 # Load the JSON file
 with open(path + '.json', 'r') as json_file:
     data = json.load(json_file)
 
+content = data['timestamps']
 # Flatten each entry in the data
-flat_data = [flatten_json(entry) for entry in data]
+flat_data = [flatten_json(entry) for entry in content]
 
 # Write the flattened data to a CSV file
 keys = flat_data[0].keys()
