@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
 const char* ssid = "XIAOYAN's iPhone";        // Your iPhone hotspot SSID
-const char* password = "LeahFan2328391";         // Your hotspot password
+const char* password = "leahFan2328391";         // Your hotspot password
 const char* host = "172.20.10.1";           // iPhone's current IP address on hotspot (check in app)
 const uint16_t port = 12345;                // Port your Swift app is listening on
 
