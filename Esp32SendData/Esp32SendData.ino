@@ -20,7 +20,7 @@ void setup() {
     Serial.println("Connecting to WiFi...");
   }
 
-  Serial.println("✅ Connected to the WiFi network");
+  Serial.println("Connected to the WiFi network");
   Serial.print("📡 Local IP address: ");
   Serial.println(WiFi.localIP());
 }
@@ -29,7 +29,7 @@ void loop() {
   WiFiClient client;
 
   if (!client.connect(host, port)) {
-    Serial.println("❌ Connection to host failed");
+    Serial.println("Connection to host failed");
     delay(5000);
     return;
   }
@@ -48,7 +48,7 @@ void loop() {
 
   // Send to iOS app via TCP
   client.print(data);
-  Serial.println("📤 Sent: " + data);
+  Serial.println("Sent: " + data);
 
   client.stop();  // Close connection after sending
   delay(1000);    // Delay for stability (1 reading/sec)
